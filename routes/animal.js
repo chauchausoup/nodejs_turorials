@@ -1,10 +1,11 @@
 const mySqlConnection = require('../connection');
 
-const { router } = require('express');
+const express = require('express');
+const Router = express.Router();
 
 
-router.get('/',(req,res)=>{
-    mySqlConnection.query("SELECT * FROM Animal",(err,rows,fields)=>{
+Router.get('/',(req,res)=>{
+    mySqlConnection.query("SELECT * FROM Property",(err,rows,fields)=>{
         if(!err){
             res.send(rows)
         }else{
@@ -13,4 +14,4 @@ router.get('/',(req,res)=>{
     })
 })
 
-module.exports=router;
+module.exports=Router;
