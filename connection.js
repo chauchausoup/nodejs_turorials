@@ -11,11 +11,6 @@ var mysqlConnection= mysql.createConnection({
     multipleStatements:true
 })
 
-
-
-
-
-
 mysqlConnection.connect((err)=>{
     if(!err){
         console.log("Connected!")

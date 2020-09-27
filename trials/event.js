@@ -6,7 +6,7 @@ var event = require('events');
 const myEmitter= new event.EventEmitter();
 
 fs.readFile('some',(err,data)=>{
-    console.log(data.toString());
+    console.log(data);
     myEmitter.emit('readFile')//event emitter only works for event
 })
 
